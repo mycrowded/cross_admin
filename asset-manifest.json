@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/cross_admin/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/cross_admin/static/js/main.b345a99e.chunk.js",
-    "main.js.map": "/cross_admin/static/js/main.b345a99e.chunk.js.map",
-    "runtime-main.js": "/cross_admin/static/js/runtime-main.f8778257.js",
-    "runtime-main.js.map": "/cross_admin/static/js/runtime-main.f8778257.js.map",
+    "main.js": "/cross_admin/static/js/main.f2a66b3a.chunk.js",
+    "main.js.map": "/cross_admin/static/js/main.f2a66b3a.chunk.js.map",
+    "runtime-main.js": "/cross_admin/static/js/runtime-main.b1578084.js",
+    "runtime-main.js.map": "/cross_admin/static/js/runtime-main.b1578084.js.map",
     "static/css/2.029b2103.chunk.css": "/cross_admin/static/css/2.029b2103.chunk.css",
-    "static/js/2.3d556533.chunk.js": "/cross_admin/static/js/2.3d556533.chunk.js",
-    "static/js/2.3d556533.chunk.js.map": "/cross_admin/static/js/2.3d556533.chunk.js.map",
-    "static/js/3.27006fe2.chunk.js": "/cross_admin/static/js/3.27006fe2.chunk.js",
-    "static/js/3.27006fe2.chunk.js.map": "/cross_admin/static/js/3.27006fe2.chunk.js.map",
+    "static/js/2.ced6bfb8.chunk.js": "/cross_admin/static/js/2.ced6bfb8.chunk.js",
+    "static/js/2.ced6bfb8.chunk.js.map": "/cross_admin/static/js/2.ced6bfb8.chunk.js.map",
+    "static/js/3.835c7cfd.chunk.js": "/cross_admin/static/js/3.835c7cfd.chunk.js",
+    "static/js/3.835c7cfd.chunk.js.map": "/cross_admin/static/js/3.835c7cfd.chunk.js.map",
     "index.html": "/cross_admin/index.html",
     "static/css/2.029b2103.chunk.css.map": "/cross_admin/static/css/2.029b2103.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/cross_admin/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.3d556533.chunk.js.LICENSE.txt": "/cross_admin/static/js/2.3d556533.chunk.js.LICENSE.txt",
+    "static/js/2.ced6bfb8.chunk.js.LICENSE.txt": "/cross_admin/static/js/2.ced6bfb8.chunk.js.LICENSE.txt",
     "static/media/background.af3a3cc5.jpg": "/cross_admin/static/media/background.af3a3cc5.jpg",
     "static/media/logoRed.dacd7a0c.png": "/cross_admin/static/media/logoRed.dacd7a0c.png",
     "static/media/notifications.css": "/cross_admin/static/media/notification.c5d9251e.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8778257.js",
+    "static/js/runtime-main.b1578084.js",
     "static/css/2.029b2103.chunk.css",
-    "static/js/2.3d556533.chunk.js",
+    "static/js/2.ced6bfb8.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b345a99e.chunk.js"
+    "static/js/main.f2a66b3a.chunk.js"
   ]
 }
