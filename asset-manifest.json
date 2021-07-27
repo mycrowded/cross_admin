@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cross_admin/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/cross_admin/static/js/main.f2a66b3a.chunk.js",
-    "main.js.map": "/cross_admin/static/js/main.f2a66b3a.chunk.js.map",
+    "main.js": "/cross_admin/static/js/main.dbd62c3b.chunk.js",
+    "main.js.map": "/cross_admin/static/js/main.dbd62c3b.chunk.js.map",
     "runtime-main.js": "/cross_admin/static/js/runtime-main.b1578084.js",
     "runtime-main.js.map": "/cross_admin/static/js/runtime-main.b1578084.js.map",
     "static/css/2.029b2103.chunk.css": "/cross_admin/static/css/2.029b2103.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.029b2103.chunk.css",
     "static/js/2.ced6bfb8.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.f2a66b3a.chunk.js"
+    "static/js/main.dbd62c3b.chunk.js"
   ]
 }
