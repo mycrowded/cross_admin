@@ -1,21 +1,35 @@
 {
+  "homepage": "http://mycrowded.github.io/cross_admin",
   "name": "cross_admin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.2",
-    "@testing-library/user-event": "^12.2.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@trendmicro/react-notifications": "^1.0.1",
+    "jwt-decode": "^3.1.2",
+    "prop-types": "^15.7.2",
+    "ra-data-json-server": "^3.17.0",
+    "ra-data-simple-rest": "^3.16.0",
+    "react": "^17.0.2",
+    "react-admin": "^3.17.0",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.3",
+    "react-notifications": "^1.7.2",
     "react-scripts": "4.0.0",
+    "react-simplert": "0.0.2",
+    "recompose": "^0.30.0",
+    "redux-form": "^8.3.7",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
