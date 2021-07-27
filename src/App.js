@@ -12,14 +12,19 @@ import 'react-notifications/lib/notifications.css';
 import { NotificationContainer, NotificationManager} from 'react-notifications';
 
 const httpClient = (url, options = {}) => {
-  if (!options.headers) { 
-    options.headers = new Headers({ Accept: 'application/json' });
-  }
   var token = localStorage.getItem('token');
-  options.headers.set('auth_token', token);
+  // if (!options.headers) { 
+  //   options.headers = new Headers({ Accept: 'application/json',
+  //  });
+  // }
 
-  
- 
+  //  options.headers.set('auth_token', token);
+
+  options.user = {
+    authenticated: true,
+    token: token
+};
+console.log(options.headers);
   return  fetchJson(url, options)
     .catch(error => {
       //alert(error);
