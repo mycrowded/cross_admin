@@ -17,7 +17,6 @@ const httpClient = (url, options = {}) => {
     authenticated: true,
     token: token
   };
-  console.log(options.headers);
   return fetchJson(url, options)
     .catch(error => {
       showNotification(error);
