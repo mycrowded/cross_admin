@@ -1,11 +1,11 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 import red from '@material-ui/core/colors/red';
 
-    
- export const theme = createTheme({
+
+export const theme = createMuiTheme({
     palette: {
-        primary: {main: "#b43f3f"},
-        secondary: {main: "#b43f3f"},
+        primary: { main: "#b43f3f" },
+        secondary: { main: "#b43f3f" },
         error: red,
         contrastThreshold: 3,
         tonalOffset: 0.2,

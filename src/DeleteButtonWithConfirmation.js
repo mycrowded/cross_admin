@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
 import { withStyles } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles';
 import ActionDelete from '@material-ui/icons/Delete';
 import classnames from 'classnames';
 import { translate, crudDelete, startUndoable } from 'ra-core';
@@ -20,7 +20,7 @@ const styles = (theme) => ({
   deleteButton: {
     color: theme.palette.error.main,
     '&:hover': {
-      backgroundColor: alpha(theme.palette.error.main, 0.12),
+      backgroundColor: fade(theme.palette.error.main, 0.12),
       // Reset on mouse devices
       '@media (hover: none)': {
         backgroundColor: 'transparent'

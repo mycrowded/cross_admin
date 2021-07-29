@@ -1,33 +1,25 @@
 import * as React from "react";
-import { fetchUtils,Admin, Resource } from 'react-admin';
+import { fetchUtils, Admin, Resource } from 'react-admin';
 import simpleRestProvider from 'ra-data-simple-rest';
 import { CrossingList, CrossingEdit, CrossingCreate } from './crossings'
-import {AdminUserCreate,AdminUserList} from './admin';
+import { AdminUserCreate, AdminUserList } from './admin';
 import Dashboard from './dashboard';
 import authProvider from './authProvider';
 import { theme } from './theme';
 import LoginPage from './theme/loginPage';
 import { fetchJson } from './fetch';
 import 'react-notifications/lib/notifications.css';
-import { NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 const httpClient = (url, options = {}) => {
   var token = localStorage.getItem('token');
-  // if (!options.headers) { 
-  //   options.headers = new Headers({ Accept: 'application/json',
-  //  });
-  // }
-
-  //  options.headers.set('auth_token', token);
-
   options.user = {
     authenticated: true,
     token: token
-};
-console.log(options.headers);
-  return  fetchJson(url, options)
+  };
+  console.log(options.headers);
+  return fetchJson(url, options)
     .catch(error => {
-      //alert(error);
       showNotification(error);
     });
 };
@@ -40,16 +32,16 @@ const showNotification = (error) => {
 const dataProvider = simpleRestProvider('https://crowdedcross.com', httpClient);
 
 const App = () => (<Admin loginPage={LoginPage} dashboard={Dashboard} dataProvider={dataProvider} authProvider={authProvider} theme={theme}>
- {permissions => [
-  <Resource name="crossings" list={CrossingList} edit={CrossingEdit} create={CrossingCreate} />,
+  {permissions => [
+    <Resource name="crossings" list={CrossingList} edit={CrossingEdit} create={CrossingCreate} />,
 
-  permissions === "Admin"?<Resource name="administrator" list={AdminUserList}create={AdminUserCreate} />:null,
-  <div>
-  <NotificationContainer />
-</div>
- 
- ]}
-  
+    permissions === "Admin" ? <Resource name="administrator" list={AdminUserList} create={AdminUserCreate} /> : null,
+    <div>
+      <NotificationContainer />
+    </div>
+
+  ]}
+
 </Admin>
 
 );

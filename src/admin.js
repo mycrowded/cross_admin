@@ -11,7 +11,8 @@ import {
   SaveButton,
   Toolbar,
   CheckboxGroupInput,
-  RadioButtonGroupInput
+  RadioButtonGroupInput,
+  PasswordInput,
 } from 'react-admin'
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import DeleteButtonWithConfirmation from './DeleteButtonWithConfirmation';
@@ -23,34 +24,34 @@ const AdminUserEditActions = ({ basePath, data }) => (
 );
 const AdminUserCreateToolbar = props => (
   <Toolbar {...props}>
-      
-      <SaveButton
-          label="crossings.action.save_and_add"
-          redirect={false}
-          submitOnEnter={false}
-          variant="flat"
-      />
-      
+
+    <SaveButton
+      label="crossings.action.save_and_add"
+      redirect={false}
+      submitOnEnter={false}
+      variant="flat"
+    />
+
   </Toolbar>
 );
 
 export const AdminUserCreate = (props) => {
-  return(
-  <Create toolbar={<AdminUserCreateToolbar/>} actions={<AdminUserEditActions />} {...props} >
-    <SimpleForm >
-      <TextInput source='username' label='Email' validate={required()} />
-      <TextInput source='password' label='Password' validate={required()} />
-      <RadioButtonGroupInput
-      source="role"
-      choices={[
-          { id: 'Admin', name: 'Admin' },
-          { id: 'Switch Installer', name: 'Switch Installer' }
-      ]}
-   />
-      
-    </SimpleForm>
-  </Create>
-);
+  return (
+    <Create toolbar={<AdminUserCreateToolbar />} actions={<AdminUserEditActions />} {...props} >
+      <SimpleForm >
+        <TextInput source='username' label='Email' validate={required()} />
+        <PasswordInput source="password" label='Password' validate={required()} />
+        <RadioButtonGroupInput
+          source="role"
+          choices={[
+            { id: 'Admin', name: 'Admin' },
+            { id: 'Switch Installer', name: 'Switch Installer' }
+          ]}
+        />
+
+      </SimpleForm>
+    </Create>
+  );
 }
 
 
@@ -58,25 +59,25 @@ export const AdminUserEdit = (props) => {
   return (<Edit actions={<AdminUserEditActions />} title='Post Edit' {...props}>
     <SimpleForm>
       <TextInput disabled label='Email' source='username' />
-      <TextInput source='password' label='Password' validate={required()}/>
+      <TextInput source='password' label='Password' validate={required()} />
       <CheckboxGroupInput
-                    source="role"
-                    choices={[
-                        { id: 'admin', name: 'Admin' },
-                        { id: 'installer', name: 'CROSS Switch Installer' }
-                    ]}
-                />
+        source="role"
+        choices={[
+          { id: 'admin', name: 'Admin' },
+          { id: 'installer', name: 'CROSS Switch Installer' }
+        ]}
+      />
     </SimpleForm>
   </Edit>);
 }
 
 export const AdminUserList = (props) => (
-    <List {...props}>
-      <Datagrid>
-      <TextField  label='Email' source='id' />
-      <TextField  label='Role' source='role' />
-        <DeleteButtonWithConfirmation />
-      </Datagrid>
-    </List>
-  )
+  <List {...props}>
+    <Datagrid>
+      <TextField label='Email' source='id' />
+      <TextField label='Role' source='role' />
+      <DeleteButtonWithConfirmation />
+    </Datagrid>
+  </List>
+)
 

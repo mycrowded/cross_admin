@@ -13,7 +13,6 @@ export default {
 
         return fetch(request)
             .then(response => {
-                // console.log("error in auth",response.status);
                 if (response.status < 200 || response.status >= 300) {
                     throw new Error(response.statusText);
                 }
@@ -21,7 +20,6 @@ export default {
             })
             .then(({ token }) => {
                 const decodedToken = decodeJwt(token);
-                console.log(token);
                 localStorage.setItem('token', token);
                 localStorage.setItem('permissions', decodedToken.permissions);
             });
